@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f8f6f1" />
+  <rect x="0" y="0" width="1200" height="10" fill="#1c1f26" />
+
+  <g font-family="Microsoft YaHei, SimHei, sans-serif" fill="#33373f">
+    <text x="100" y="118" font-size="26" letter-spacing="6">人工智能实验室</text>
+  </g>
+  <line x1="100" y1="150" x2="1100" y2="150" stroke="#c9c5bc" stroke-width="1" />
+
+  <g font-family="Microsoft YaHei, SimHei, sans-serif" fill="#1c1f26">
+    <text x="100" y="290" font-size="82" font-weight="700">人工智能实验室</text>
+  </g>
+  <g font-family="Georgia, 'Times New Roman', serif" fill="#4d525c">
+    <text x="100" y="352" font-size="34" letter-spacing="1">Artificial Intelligence Laboratory</text>
+  </g>
+
+  <g font-family="Microsoft YaHei, SimHei, sans-serif" fill="#4d525c" font-size="28">
+    <text x="100" y="456">蒋峰岭课题组 · 多模态感知与理解</text>
+  </g>
+
+  <line x1="100" y1="510" x2="1100" y2="510" stroke="#dedad2" stroke-width="1" />
+
+  <g font-family="Microsoft YaHei, SimHei, sans-serif" fill="#33373f" font-size="24">
+    <text x="100" y="560">图像描述生成</text>
+    <text x="420" y="560">视听语音增强</text>
+    <text x="740" y="560">多模态融合与目标跟踪</text>
+  </g>
+
+  <g fill="#1c1f26">
+    <circle cx="1076" cy="88" r="7" />
+    <circle cx="1102" cy="88" r="7" />
+    <circle cx="1089" cy="64" r="7" />
+    <line x1="1076" y1="88" x2="1089" y2="64" stroke="#1c1f26" stroke-width="3" />
+    <line x1="1102" y1="88" x2="1089" y2="64" stroke="#1c1f26" stroke-width="3" />
+  </g>
+</svg>

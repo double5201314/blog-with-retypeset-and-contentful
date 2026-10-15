@@ -1,11 +1,6 @@
 // Global Language Map
 export const langMap: Record<string, string[]> = {
   'zh': ['zh-CN'],
-  'zh-tw': ['zh-TW'],
-  'ja': ['ja-JP'],
-  'en': ['en-US'],
-  'es': ['es-ES'],
-  'ru': ['ru-RU'],
 }
 
 // Waline Language Map

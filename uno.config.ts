@@ -1,4 +1,4 @@
-import type { Theme } from 'unocss/preset-uno'
+import type { Preset } from 'unocss'
 import {
   defineConfig,
   presetAttributify,
@@ -15,13 +15,13 @@ export default defineConfig({
   presets: [
     presetWind3(),
     presetAttributify(),
-    presetTheme<Theme>({
+    presetTheme({
       theme: {
         dark: {
           colors: dark,
         },
       },
-    }),
+    }) as Preset,
   ],
   theme: {
     colors: light,
@@ -33,7 +33,7 @@ export default defineConfig({
     },
   },
   shortcuts: {
-    'uno-desktop-column': 'fixed w-14rem right-[max(5.625rem,calc(50vw-34.375rem))]',
+    'uno-desktop-column': 'fixed w-16rem right-[max(5.625rem,calc(50vw-34.375rem))]',
     'uno-tags-style': 'inline-block whitespace-nowrap border border-secondary/25 rounded-full px-3.2 py-0.7 c-secondary transition-colors hover:(border-secondary/75 text-primary)',
     'uno-decorative-line': 'h-0.25 w-10 bg-secondary/25 mb-4.5 lg:(w-11 mb-6)',
     'uno-tags-wrapper': 'w-95% flex flex-wrap gap-x-3 gap-y-3.2 lg:w-100%',

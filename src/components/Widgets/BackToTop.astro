@@ -8,7 +8,7 @@
 <button
   id="back-to-top-button"
   aria-label="Back to top"
-  class="fixed bottom-8 right-8 h-10 w-10 rounded-full bg-background transition-all duration-300 ease-out"
+  class="fixed bottom-8 right-8 h-10 w-10 rounded-full bg-background opacity-0 pointer-events-none translate-y-4 transition-all duration-300 ease-out"
 >
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -21,57 +21,48 @@
 </button>
 
 <script>
-let observer: IntersectionObserver | null = null
-let backToTopButton: HTMLButtonElement | null = null
+let cleanupBackToTop: (() => void) | null = null
 
-function initBackToTop() {
-  // Get elements
-  const sentinel = document.getElementById('top-sentinel')
-  backToTopButton = document.getElementById('back-to-top-button') as HTMLButtonElement
+function setupBackToTop() {
+  cleanupBackToTop?.()
 
-  if (!sentinel || !backToTopButton)
+  const sentinel = document.querySelector<HTMLElement>('#top-sentinel')
+  const button = document.querySelector<HTMLButtonElement>('#back-to-top-button')
+
+  if (!sentinel || !button)
     return
 
-  // Initialize IntersectionObserver
-  observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        backToTopButton?.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4')
-      }
-      else {
-        backToTopButton?.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4')
-      }
-    },
-    {
-      threshold: 0,
-      rootMargin: '30% 0% 0% 0%',
-    },
-  )
+  const topSentinel: HTMLElement = sentinel
+  const topButton: HTMLButtonElement = button
 
-  // Observe sentinel
-  observer.observe(sentinel)
+  function update() {
+    // Reveal the button once the top of the page has scrolled out of sight
+    const isScrolled = topSentinel.getBoundingClientRect().bottom < -window.innerHeight * 0.3
+    topButton.classList.toggle('opacity-0', !isScrolled)
+    topButton.classList.toggle('pointer-events-none', !isScrolled)
+    topButton.classList.toggle('translate-y-4', !isScrolled)
+  }
 
-  // Add click handler
-  backToTopButton.addEventListener('click', () => {
+  function scrollToTop() {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     })
-  })
-}
-
-function cleanup() {
-  // Cleanup observer
-  if (observer) {
-    observer.disconnect()
-    observer = null
   }
 
-  // Remove event listeners
-  backToTopButton = null
+  topButton.addEventListener('click', scrollToTop)
+  window.addEventListener('scroll', update, { passive: true })
+  window.addEventListener('resize', update)
+  update()
+
+  cleanupBackToTop = () => {
+    topButton.removeEventListener('click', scrollToTop)
+    window.removeEventListener('scroll', update)
+    window.removeEventListener('resize', update)
+  }
 }
 
-// Handle page transitions
-document.addEventListener('astro:page-load', initBackToTop)
-document.addEventListener('astro:before-swap', cleanup)
+setupBackToTop()
+document.addEventListener('astro:before-swap', () => cleanupBackToTop?.())
+document.addEventListener('astro:after-swap', setupBackToTop)
 </script>

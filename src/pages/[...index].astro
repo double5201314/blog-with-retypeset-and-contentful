@@ -1,10 +1,11 @@
 ---
-import PostList from '@/components/PostList.astro'
+import DirectionIcon from '@/components/DirectionIcon.astro'
+import SectionTitle from '@/components/SectionTitle.astro'
 import { defaultLocale, moreLocales } from '@/config'
+import { advisor, collaborations, lab, members, publications, researchDirections } from '@/data/lab'
 import Layout from '@/layouts/Layout.astro'
-import { getPinnedPosts, getPostsByYear } from '@/utils/content'
 
-export async function getStaticPaths() {
+export function getStaticPaths() {
   type PathItem = {
     params: { index: string | undefined }
     props: { lang: string }
@@ -29,25 +30,135 @@ export async function getStaticPaths() {
   return paths
 }
 
-const { lang } = Astro.props
-
-const pinnedPosts = await getPinnedPosts(lang)
-const postsByYear = await getPostsByYear(lang)
+const directionIcons = ['image', 'waveform', 'tracking'] as const
 ---
-<Layout>
-  <!-- Pinned Posts -->
-  {pinnedPosts.length > 0 && (
-    <section class="mb-7.5">
-      <div class="uno-decorative-line"></div>
-      <PostList posts={pinnedPosts} lang={lang} />
-    </section>
-  )}
 
-  <!-- Regular Posts -->
-  {[...postsByYear.entries()].map(([_year, posts]) => (
-    <section class="mb-7.5">
-      <div class="uno-decorative-line"></div>
-      <PostList posts={posts} lang={lang} />
-    </section>
-  ))}
+<Layout>
+  <!-- 实验室简介 -->
+  <section id="about" class="scroll-mt-10">
+    <SectionTitle title="实验室简介" />
+
+    <div class="heti mt-1">
+      {lab.introduction.map(paragraph => <p>{paragraph}</p>)}
+    </div>
+
+    <dl
+      class="mt-2 grid grid-cols-3 gap-x-4 border-t border-secondary/15 pt-5"
+      lg="gap-x-8"
+    >
+      {lab.facts.map(fact => (
+        <div>
+          <dt class="text-3 c-secondary/80 lg:text-3.5">{fact.label}</dt>
+          <dd class="mt-1 text-5 font-bold c-primary lg:text-6">{fact.value}</dd>
+        </div>
+      ))}
+    </dl>
+  </section>
+
+  <!-- 研究方向 -->
+  <section id="research" class="mt-13 scroll-mt-10">
+    <SectionTitle title="研究方向" />
+
+    <div class="mt-7 space-y-10">
+      {researchDirections.map((direction, index) => (
+        <article id={direction.id} class="scroll-mt-10">
+          <div class="flex items-start gap-3.5">
+            <span class="mt-1 aspect-square w-5 shrink-0 c-secondary/70">
+              <DirectionIcon name={directionIcons[index]} />
+            </span>
+            <div class="min-w-0">
+              <h3 class="text-4.5 font-bold c-primary lg:text-5">
+                {direction.title}
+              </h3>
+              <p class="mt-0.5 text-3.25 c-secondary/70">
+                {direction.titleEn}
+              </p>
+            </div>
+          </div>
+
+          <p class="mt-3.5 text-4 leading-7 c-secondary text-justify">
+            {direction.summary}
+          </p>
+
+          <ul class="mt-3 space-y-2">
+            {direction.details.map(detail => (
+              <li class="flex gap-2.5">
+                <span
+                  aria-hidden="true"
+                  class="mt-3 h-1 w-1 shrink-0 rounded-full bg-secondary/50"
+                >
+                </span>
+                <span class="text-3.75 leading-6.5 c-secondary">{detail}</span>
+              </li>
+            ))}
+          </ul>
+
+          <dl class="mt-4 flex flex-wrap gap-x-6 gap-y-2 border-t border-secondary/15 pt-3">
+            {direction.facts.map(fact => (
+              <div class="flex items-baseline gap-2">
+                <dt class="text-3.25 c-secondary/70">{fact.label}</dt>
+                <dd class="text-3.5 font-medium c-primary">{fact.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- 团队成员 -->
+  <section id="members" class="mt-13 scroll-mt-10">
+    <SectionTitle title="团队成员" />
+
+    <div class="mt-7 border-l-2 border-secondary/40 pl-4.5">
+      <div class="text-4.5 font-bold c-primary">{advisor.name}</div>
+      <div class="mt-0.5 text-3.5 c-secondary/80">{advisor.role}</div>
+    </div>
+
+    <ul class="mt-5 grid grid-cols-1 gap-x-6 gap-y-4.5 sm:grid-cols-2">
+      {members.map(member => (
+        <li class="border-l-2 border-secondary/15 pl-4.5">
+          <div class="text-4 font-semibold c-primary">{member.name}</div>
+          <div class="mt-0.5 text-3.25 c-secondary/80">{member.affiliation}</div>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- 学术成果 -->
+  <section id="publications" class="mt-13 scroll-mt-10">
+    <SectionTitle title="学术成果" />
+
+    <ul class="mt-5">
+      {publications.map(publication => (
+        <li
+          class="grid grid-cols-1 gap-x-5 gap-y-1 border-b border-secondary/15 py-4"
+          sm="grid-cols-[minmax(0,0.9fr)_minmax(0,1.2fr)_auto] items-baseline"
+        >
+          <div class="text-3.75 font-medium c-primary">{publication.direction}</div>
+          <div class="text-3.5 c-secondary">{publication.venue}</div>
+          <div class="text-3.5 c-secondary/80 sm:text-right">{publication.status}</div>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- 合作交流 -->
+  <section id="collaboration" class="mt-13 scroll-mt-10">
+    <SectionTitle title="合作交流" />
+
+    <ul class="mt-6 space-y-5.5">
+      {collaborations.map(item => (
+        <li>
+          <div class="flex flex-wrap items-baseline gap-x-2.5">
+            <span class="text-4 font-semibold c-primary">{item.partner}</span>
+            {item.partnerEn && (
+              <span class="text-3.25 c-secondary/70">{item.partnerEn}</span>
+            )}
+          </div>
+          <p class="mt-1.5 text-3.75 leading-6.5 c-secondary">{item.detail}</p>
+        </li>
+      ))}
+    </ul>
+  </section>
 </Layout>

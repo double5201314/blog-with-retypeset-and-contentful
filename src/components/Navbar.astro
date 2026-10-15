@@ -2,39 +2,35 @@
 import { ui } from '@/i18n/ui'
 import { getPageInfo } from '@/utils/page'
 
-const { currentLang, isHome, isPost, isTag, isAbout, getLocalizedPath } = getPageInfo(Astro.url.pathname)
+const { currentLang } = getPageInfo(Astro.url.pathname)
 const currentUI = ui[currentLang as keyof typeof ui]
-
-const isPostActive = isHome || isPost
-const isTagActive = isTag
-const isAboutActive = isAbout
-
-function getNavItemClass(isActive: boolean) {
-  return isActive ? 'font-bold c-primary' : 'hover:(c-primary font-bold) transition-all'
-}
 
 const navItems = [
   {
-    href: '/',
-    label: currentUI.posts,
-    className: getNavItemClass(isPostActive),
-  },
-  {
-    href: '/tags/',
-    label: currentUI.tags,
-    className: getNavItemClass(isTagActive),
-  },
-  {
-    href: '/about/',
+    anchor: 'about',
     label: currentUI.about,
-    className: getNavItemClass(isAboutActive),
+  },
+  {
+    anchor: 'research',
+    label: currentUI.research,
+  },
+  {
+    anchor: 'members',
+    label: currentUI.members,
+  },
+  {
+    anchor: 'publications',
+    label: currentUI.publications,
+  },
+  {
+    anchor: 'collaboration',
+    label: currentUI.collaboration,
   },
 ]
 ---
 
 <nav
   class:list={[
-    isPost ? 'hidden lg:block' : '',
     'mb-10.5 text-3.6 font-semibold leading-8.75 font-navbar',
     'lg:(uno-desktop-column text-4 leading-9.72 bottom-50)',
   ]}
@@ -43,8 +39,9 @@ const navItems = [
     {navItems.map(item => (
       <li>
         <a
-          href={getLocalizedPath(item.href)}
-          class={item.className}
+          href={`#${item.anchor}`}
+          data-nav-anchor
+          class="transition-colors hover:(c-primary font-bold)"
         >
           {item.label}
         </a>
@@ -52,3 +49,59 @@ const navItems = [
     ))}
   </ul>
 </nav>
+
+<script>
+// Highlight the navigation item of the section currently in view
+let cleanupNavSpy: (() => void) | null = null
+
+function setupNavSpy() {
+  cleanupNavSpy?.()
+
+  const links = Array.from(document.querySelectorAll<HTMLAnchorElement>('a[data-nav-anchor]'))
+  const sections = links
+    .map(link => document.querySelector<HTMLElement>(link.getAttribute('href') || ''))
+    .filter((section): section is HTMLElement => section !== null)
+
+  if (sections.length === 0)
+    return
+
+  function setActive(id: string) {
+    links.forEach((link) => {
+      const isActive = link.getAttribute('href') === `#${id}`
+      link.classList.toggle('c-primary', isActive)
+      link.classList.toggle('font-bold', isActive)
+    })
+  }
+
+  function update() {
+    const threshold = window.innerHeight * 0.3
+    let current = sections[0]
+
+    sections.forEach((section) => {
+      if (section.getBoundingClientRect().top <= threshold)
+        current = section
+    })
+
+    // Once the page cannot scroll any further, highlight the last section
+    const scrollTop = window.scrollY || document.documentElement.scrollTop
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight
+    if (maxScroll > 8 && scrollTop >= maxScroll - 8)
+      current = sections[sections.length - 1]
+
+    setActive(current.id)
+  }
+
+  update()
+  window.addEventListener('scroll', update, { passive: true })
+  window.addEventListener('resize', update)
+
+  cleanupNavSpy = () => {
+    window.removeEventListener('scroll', update)
+    window.removeEventListener('resize', update)
+  }
+}
+
+setupNavSpy()
+document.addEventListener('astro:before-swap', () => cleanupNavSpy?.())
+document.addEventListener('astro:after-swap', setupNavSpy)
+</script>
