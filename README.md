@@ -58,6 +58,23 @@ lab-site/
 
 **导航为二级菜单**：实验室概况 / 科研成果 / 新闻动态 / 加入我们 四个一级项带下拉，桌面端悬停展开，移动端默认展开为缩进列表（不做二次点击，避免手机上点不到）。
 
+## 代码仓库
+
+- 地址：https://github.com/double5201314/blog-with-retypeset-and-contentful （私有）
+- 分支：
+  - `main` — 当前站点（仓库根目录就是站点根目录）
+  - `backup-before-labsite` — 2026-10-25 覆盖前的旧版本（原 blog 模板 + 上一版实验室主页），需要找回时可以从这里恢复
+- 提交身份：`double5201314 <kobebryantwxr@gmail.com>`
+- 行尾统一为 LF（`.gitattributes` 里 `* text=auto eol=lf`），图片按二进制处理
+
+日常更新：
+
+```bash
+git add -A && git commit -m "更新：xxx" && git push
+```
+
+> 注意：本机是浅克隆（`--depth=1 --filter=blob:none`），只能看到远端最近一次提交；需要完整历史时执行 `git fetch --unshallow`（网络不稳时可能失败，失败不影响推送）。
+
 ## 部署到 EdgeOne Pages
 
 ### 方式 A：连接 Git（推荐）
