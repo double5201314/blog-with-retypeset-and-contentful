@@ -1,0 +1,12 @@
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 临时文件
+_*.html
+*.log
+*.tmp
+
+# 依赖目录（本项目为纯静态站点，正常不产生）
+node_modules/
