@@ -25,7 +25,6 @@ lab-site/
 ├── publications.html     论文成果（按年份筛选，含 TMM 2026 的 SMART）
 ├── news.html             新闻动态（按分类筛选 + 会议现场照片 + 例行活动）
 ├── join.html             加入我们（招生对象、基础要求、申请流程、常见问题）
-├── guide.html            入组须知（组会制度、资源、管理、论文规范等 12 节）
 ├── contact.html          联系我们（地址、邮箱、来访指引）
 ├── 404.html              错误页
 ├── robots.txt / sitemap.xml

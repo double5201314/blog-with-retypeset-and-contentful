@@ -7,7 +7,6 @@
   <url><loc>https://lab.example.com/publications.html</loc><priority>0.9</priority></url>
   <url><loc>https://lab.example.com/news.html</loc><priority>0.8</priority></url>
   <url><loc>https://lab.example.com/join.html</loc><priority>0.7</priority></url>
-  <url><loc>https://lab.example.com/guide.html</loc><priority>0.7</priority></url>
   <url><loc>https://lab.example.com/contact.html</loc><priority>0.6</priority></url>
   <url><loc>https://lab.example.com/jiangfengling.html</loc><priority>0.4</priority></url>
   <url><loc>https://lab.example.com/wangfan.html</loc><priority>0.4</priority></url>
