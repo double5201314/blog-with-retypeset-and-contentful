@@ -425,6 +425,7 @@ main { display: block; padding-bottom: 96px; }
 }
 .pub__icon { flex: none; margin-top: 4px; color: #b6bcc9; }
 .pub__body { flex: 1 1 auto; min-width: 0; font-size: 16px; line-height: 1.85; }
+.pub__body p { margin-bottom: 0; }
 .pub__authors { color: var(--text-soft); }
 .pub__authors strong { font-weight: 700; color: var(--heading); }
 .pub__year { color: var(--muted); }
