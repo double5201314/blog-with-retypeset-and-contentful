@@ -62,7 +62,7 @@ body {
   background: #fff;
   color: var(--text);
   font-family: var(--font-body);
-  font-size: 17px;
+  font-size: 20px;
   line-height: 1.75;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -114,7 +114,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .brand > svg { display: none !important; }
 .brand__text { display: flex; flex-direction: column; line-height: 1.15; }
 .brand__label {
-  font-size: 8.5px;
+  font-size: 9.5px;
   letter-spacing: .16em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, .72);
@@ -129,12 +129,12 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .brand__word b {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 20px;
+  font-size: 22px;
   letter-spacing: .07em;
   color: #fff;
 }
 .brand__word span {
-  font-size: 11.5px;
+  font-size: 12.5px;
   letter-spacing: .06em;
   color: rgba(255, 255, 255, .9);
 }
@@ -144,7 +144,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   position: relative;
   display: flex;
   align-items: center;
-  font-size: 14.5px;
+  font-size: 15.5px;
   color: rgba(255, 255, 255, .84);
   padding: 0;
   transition: color .18s;
@@ -162,7 +162,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   background: rgba(255, 255, 255, .85);
 }
 
-.lang { display: flex; align-items: center; align-self: center; gap: 5px; margin-left: 6px; font-size: 12.5px; }
+.lang { display: flex; align-items: center; align-self: center; gap: 5px; margin-left: 6px; font-size: 13.5px; }
 .lang button {
   font: inherit;
   color: rgba(255, 255, 255, .72);
@@ -208,14 +208,17 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   padding: 0 28px;
 }
 
+/* 首页文字区比内页左右各宽 6 个字（12em，按正文 20px 计 = 240px） */
+.page-home .container { max-width: calc(var(--container) + 12em); }
+
 main { display: block; padding-bottom: 96px; }
 
 .page-title { padding: 84px 0 0; text-align: center; }
-.page-title h1 { font-size: 40px; letter-spacing: .015em; }
+.page-title h1 { font-size: 46px; letter-spacing: .015em; }
 .page-title p {
   margin: 16px auto 0;
   max-width: 700px;
-  font-size: 15.5px;
+  font-size: 17px;
   color: var(--muted);
   line-height: 1.8;
 }
@@ -223,7 +226,7 @@ main { display: block; padding-bottom: 96px; }
 .section { margin-top: 74px; }
 .section__title {
   text-align: center;
-  font-size: 30px;
+  font-size: 34px;
   margin-bottom: 32px;
 }
 .section__title b { font-weight: 400; }
@@ -240,8 +243,8 @@ main { display: block; padding-bottom: 96px; }
 /* 首页简介 */
 .intro { margin-top: 40px; }
 .intro p {
-  font-size: 17.5px;
-  line-height: 1.9;
+  font-size: 20px;
+  line-height: 1.85;
   color: var(--text);
   text-align: left;
 }
@@ -258,7 +261,7 @@ main { display: block; padding-bottom: 96px; }
   display: flex;
   gap: 10px;
   padding: 10px 0;
-  font-size: 15.5px;
+  font-size: 18px;
   color: var(--text-soft);
   line-height: 1.6;
 }
@@ -275,7 +278,7 @@ main { display: block; padding-bottom: 96px; }
 .areas em {
   display: block;
   font-style: normal;
-  font-size: 12.5px;
+  font-size: 14px;
   color: var(--muted);
   letter-spacing: .01em;
 }
@@ -291,13 +294,13 @@ main { display: block; padding-bottom: 96px; }
 }
 .news-item__main { flex: 1 1 auto; min-width: 0; }
 .news-item__meta {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--muted);
   letter-spacing: .01em;
   margin-bottom: 8px;
 }
 .news-item__title {
-  font-size: 21px;
+  font-size: 24px;
   color: var(--heading);
   margin-bottom: 7px;
   line-height: 1.5;
@@ -305,17 +308,17 @@ main { display: block; padding-bottom: 96px; }
 .news-item__title a { color: inherit; }
 .news-item__title a:hover { color: var(--primary); text-decoration: none; }
 .news-item__excerpt {
-  font-size: 16px;
+  font-size: 19px;
   line-height: 1.85;
   color: var(--text-soft);
 }
 .news-item__badge {
   flex: none;
-  width: 100px;
+  width: 112px;
   padding-top: 24px;
   text-align: right;
   font-family: var(--font-display);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: .06em;
   color: #9aa2b1;
@@ -325,7 +328,7 @@ main { display: block; padding-bottom: 96px; }
 .more-link {
   display: inline-block;
   margin-top: 26px;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--primary);
 }
 .more-link::after { content: " →"; }
@@ -340,8 +343,8 @@ main { display: block; padding-bottom: 96px; }
 
 .person { text-align: center; }
 .person__avatar {
-  width: 132px;
-  height: 132px;
+  width: 148px;
+  height: 148px;
   margin: 0 auto 16px;
   border-radius: 50%;
   background: #eef0f6;
@@ -350,21 +353,21 @@ main { display: block; padding-bottom: 96px; }
   place-items: center;
   overflow: hidden;
   font-family: var(--font-display);
-  font-size: 38px;
+  font-size: 48px;
   font-weight: 400;
   user-select: none;
 }
 .person__avatar img { width: 100%; height: 100%; object-fit: cover; }
 .person__name {
   font-family: var(--font-display);
-  font-size: 18px;
+  font-size: 21px;
   color: var(--heading);
   line-height: 1.4;
 }
-.person__cn { font-size: 13px; color: var(--muted); margin-top: 1px; }
-.person__role { font-size: 13px; color: var(--muted); margin-top: 8px; }
+.person__cn { font-size: 14px; color: var(--muted); margin-top: 1px; }
+.person__role { font-size: 14px; color: var(--muted); margin-top: 8px; }
 .person__field {
-  font-size: 12.5px;
+  font-size: 14px;
   color: #858d9c;
   margin-top: 4px;
   line-height: 1.6;
@@ -392,10 +395,10 @@ main { display: block; padding-bottom: 96px; }
 }
 .filters input,
 .filters select {
-  height: 38px;
-  padding: 0 11px;
+  height: 42px;
+  padding: 0 12px;
   font-family: inherit;
-  font-size: 13.5px;
+  font-size: 14.5px;
   color: var(--text);
   background: #fff;
   border: 1px solid #d8dce4;
@@ -411,7 +414,7 @@ main { display: block; padding-bottom: 96px; }
   display: flex;
   justify-content: space-between;
   gap: 16px;
-  font-size: 12.5px;
+  font-size: 13.5px;
   color: var(--muted);
   padding: 12px 0;
   border-bottom: 1px solid var(--line);
@@ -424,7 +427,7 @@ main { display: block; padding-bottom: 96px; }
   border-bottom: 1px solid var(--line);
 }
 .pub__icon { flex: none; margin-top: 4px; color: #b6bcc9; }
-.pub__body { flex: 1 1 auto; min-width: 0; font-size: 16px; line-height: 1.85; }
+.pub__body { flex: 1 1 auto; min-width: 0; font-size: 17px; line-height: 1.85; }
 .pub__body p { margin-bottom: 0; }
 .pub__authors { color: var(--text-soft); }
 .pub__authors strong { font-weight: 700; color: var(--heading); }
@@ -436,7 +439,7 @@ main { display: block; padding-bottom: 96px; }
 .pill {
   display: inline-block;
   font-family: var(--font-display);
-  font-size: 11.5px;
+  font-size: 12.5px;
   letter-spacing: .04em;
   line-height: 1.7;
   padding: 1px 8px;
@@ -447,7 +450,7 @@ main { display: block; padding-bottom: 96px; }
 }
 a.pill:hover { color: var(--primary); border-color: var(--primary); text-decoration: none; }
 
-.pub-empty { padding: 40px 0; font-size: 14.5px; color: var(--muted); text-align: center; }
+.pub-empty { padding: 40px 0; font-size: 17px; color: var(--muted); text-align: center; }
 
 /* ---------- 相册 ---------- */
 /* 图片突破 820 内容栏，按视口 75% 显示（约 3/4 页面宽），居中 */
@@ -472,7 +475,7 @@ a.pill:hover { color: var(--primary); border-color: var(--primary); text-decorat
 }
 .gallery figcaption {
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   color: var(--muted);
 }
@@ -484,14 +487,14 @@ a.pill:hover { color: var(--primary); border-color: var(--primary); text-decorat
   gap: 24px;
   padding: 17px 0;
   border-bottom: 1px solid var(--line);
-  font-size: 15.5px;
+  font-size: 18px;
   line-height: 1.8;
 }
 .info-row__label {
   flex: none;
   width: 112px;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 15.5px;
 }
 .info-row__value { flex: 1 1 auto; min-width: 0; }
 .info-row__value em {
@@ -513,7 +516,7 @@ a.pill:hover { color: var(--primary); border-color: var(--primary); text-decorat
   gap: 8px 18px;
   padding: 11px 14px;
   border-top: 1px solid var(--line);
-  font-size: 12.5px;
+  font-size: 13.5px;
   color: var(--muted);
 }
 .map__foot a { color: var(--primary); }
@@ -527,7 +530,7 @@ a.pill:hover { color: var(--primary); border-color: var(--primary); text-decorat
 .site-footer p {
   margin: 0;
   text-align: center;
-  font-size: 13px;
+  font-size: 14.5px;
   line-height: 2;
   color: var(--muted);
 }
@@ -554,8 +557,8 @@ a.pill:hover { color: var(--primary); border-color: var(--primary); text-decorat
 
   .site-header__inner { height: 60px; padding: 0 18px; gap: 12px; }
   .brand__label { display: none; }
-  .brand__word b { font-size: 17px; }
-  .brand__word span { font-size: 10.5px; }
+  .brand__word b { font-size: 19px; }
+  .brand__word span { font-size: 11.5px; }
 
   .nav-toggle { display: block; }
 
@@ -578,7 +581,7 @@ a.pill:hover { color: var(--primary); border-color: var(--primary); text-decorat
     display: block;
     padding: 12px 0;
     border-bottom: 1px solid rgba(255, 255, 255, .12);
-    font-size: 14.5px;
+    font-size: 15.5px;
   }
   .nav a.is-active { border-bottom-color: rgba(255, 255, 255, .12); color: #fff; }
   .nav a.is-active::after { display: none; }
@@ -586,18 +589,18 @@ a.pill:hover { color: var(--primary); border-color: var(--primary); text-decorat
 
   .container { padding: 0 20px; }
   .page-title { padding-top: 52px; }
-  .page-title h1 { font-size: 27px; }
-  .page-title p { font-size: 14px; }
+  .page-title h1 { font-size: 30px; }
+  .page-title p { font-size: 15.5px; }
   .section { margin-top: 52px; }
-  .section__title { font-size: 22px; }
+  .section__title { font-size: 24px; }
 
   .areas { grid-template-columns: 1fr; gap: 0; }
 
   .news-item { gap: 14px; }
-  .news-item__badge { width: 62px; padding-top: 24px; font-size: 11px; }
-  .news-item__title { font-size: 16.5px; }
+  .news-item__badge { width: 62px; padding-top: 24px; font-size: 12px; }
+  .news-item__title { font-size: 19px; }
 
-  .pub__body { font-size: 14.5px; }
+  .pub__body { font-size: 17px; }
   .info-row { flex-direction: column; gap: 2px; }
   .info-row__label { width: auto; }
 }
@@ -607,7 +610,7 @@ a.pill:hover { color: var(--primary); border-color: var(--primary); text-decorat
   .gallery figure { width: 100%; }
   .people-grid,
   .people-grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 12px; }
-  .person__avatar { width: 92px; height: 92px; font-size: 30px; }
+  .person__avatar { width: 104px; height: 104px; font-size: 34px; }
 }
 
 /* ---------- 打印 ---------- */
