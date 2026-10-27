@@ -15,7 +15,7 @@
 | `index.html` | 首页（实验室简介 + 研究方向 + 最新动态） | Home |
 | `news.html` | 动态 | News |
 | `people.html` | 团队成员（教师 3 / 研究生 4） | People |
-| `publications.html` | 论文（蒋峰岭，24 篇，附 DOI） | Publications |
+| `publications.html` | 论文（蒋峰岭近五年 18 篇，附 DOI） | Publications |
 | `gallery.html` | 相册 | Gallery |
 | `contact.html` | 联系（地址、邮箱、招生、地图） | Contact |
 | `404.html` | 页面不存在 | Page not found |
@@ -110,7 +110,9 @@ lab-site/
 
 ## 论文页（重要：论文必须真实）
 
-`publications.html` 收录 **蒋峰岭（Fengling Jiang, Hefei Normal University）** 在 OpenAlex 作者档案（`A5076256814`）下的 **24 篇**论文，2018—2026 年，每条都带 DOI 链接，可逐条核验。
+`publications.html` 收录 **蒋峰岭（Fengling Jiang, Hefei Normal University）** 在 OpenAlex 作者档案（`A5076256814`）下 **2022—2026 年（近五年）的 18 篇**论文，每条都带 DOI 链接，可逐条核验。
+
+> 该作者档案共 24 篇（2018 年起），按「只展示近五年」的要求，2018—2021 年的 6 篇未上页面；需要时从 git 历史（`6489e95` 之前）或 OpenAlex 直接取回。
 
 - 数据来自 OpenAlex API：`https://api.openalex.org/works?filter=author.id:A5076256814`
 - 页面上每条为 `<article class="pub" data-year="2026" data-type="journal">`，`data-type` 只有 `journal` / `conference` 两种，筛选与年份下拉都依赖这两个属性。
