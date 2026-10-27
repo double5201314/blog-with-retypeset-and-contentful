@@ -445,22 +445,29 @@ a.pill:hover { color: var(--primary); border-color: var(--primary); text-decorat
 }
 
 /* ---------- 相册 ---------- */
+/* 图片突破 820 内容栏，按视口 75% 显示（约 3/4 页面宽），居中 */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px 14px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 48px;
+  justify-items: center;
 }
-.gallery figure { margin: 0; }
+.gallery figure {
+  margin: 0;
+  width: 75vw;
+  max-width: 1200px;
+  justify-self: center;
+}
 .gallery img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
   border-radius: 2px;
   background: var(--bg-soft);
 }
 .gallery figcaption {
-  margin-top: 9px;
-  font-size: 12.5px;
+  margin-top: 10px;
+  font-size: 13px;
   line-height: 1.6;
   color: var(--muted);
 }
@@ -534,7 +541,7 @@ a.pill:hover { color: var(--primary); border-color: var(--primary); text-decorat
 @media (max-width: 900px) {
   .people-grid,
   .people-grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 38px 18px; }
-  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gallery figure { width: 100%; }
 }
 
 @media (max-width: 760px) {
@@ -589,7 +596,8 @@ a.pill:hover { color: var(--primary); border-color: var(--primary); text-decorat
 }
 
 @media (max-width: 480px) {
-  .gallery { grid-template-columns: 1fr; }
+  .gallery { gap: 32px; }
+  .gallery figure { width: 100%; }
   .people-grid,
   .people-grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 12px; }
   .person__avatar { width: 92px; height: 92px; font-size: 30px; }

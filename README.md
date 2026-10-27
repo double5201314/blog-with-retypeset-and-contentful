@@ -17,7 +17,7 @@
 | `people.html` | 团队成员（教师 3 / 研究生 4） | People |
 | `publications.html` | 论文（蒋峰岭，24 篇，附 DOI） | Publications |
 | `gallery.html` | 相册 | Gallery |
-| `contact.html` | 联系（地址、邮箱、电话、招生、地图） | Contact |
+| `contact.html` | 联系（地址、邮箱、招生、地图） | Contact |
 | `404.html` | 页面不存在 | Page not found |
 
 共 7 个页面，导航固定为「首页 / 动态 / 成员 / 论文 / 相册 / 联系」。
@@ -32,7 +32,7 @@ lab-site/
 │   ├── css/style.css        全部样式（单文件，约 13KB）
 │   ├── js/site.js           中英切换、移动端菜单、论文筛选（约 5KB）
 │   ├── fonts/               Jura 400/600、B612 400/700（woff2，共 81KB）
-│   ├── img/                 5 张照片 + favicon.svg
+│   ├── img/                 4 张照片 + favicon.svg
 │   └── vendor/leaflet/      Leaflet 1.9.4（本地托管，仅联系页地图用）
 ├── sitemap.xml
 └── README.md
@@ -100,7 +100,9 @@ lab-site/
 
 ### 换相册照片
 
-`gallery.html` 里复制一个 `<figure>`，图片按 **4:3** 裁好（建议 800×600），`figcaption` 写中英两版。
+`gallery.html` 里复制一个 `<figure>`，图片按 **3:2** 裁好（建议 1400×933），`figcaption` 写中英两版。
+
+相册为单列大图：每张按视口宽度的 **75%** 居中（`width: 75vw`，上限 1200px），会突破 820px 内容栏；窗口宽度 ≤900px 时回落到 100%。所以相册照片的横向分辨率不能太低，**低于 1200px 宽的图在大屏上会发虚**。
 
 ### 改联系信息 / 地图点位
 
