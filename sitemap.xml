@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://lab.example.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://lab.example.com/about.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lab.example.com/research.html</loc><priority>0.9</priority></url>
-  <url><loc>https://lab.example.com/members.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lab.example.com/publications.html</loc><priority>0.9</priority></url>
   <url><loc>https://lab.example.com/news.html</loc><priority>0.8</priority></url>
-  <url><loc>https://lab.example.com/join.html</loc><priority>0.7</priority></url>
-  <url><loc>https://lab.example.com/contact.html</loc><priority>0.6</priority></url>
-  <url><loc>https://lab.example.com/jiangfengling.html</loc><priority>0.4</priority></url>
-  <url><loc>https://lab.example.com/wangfan.html</loc><priority>0.4</priority></url>
-  <url><loc>https://lab.example.com/fangaoyan.html</loc><priority>0.4</priority></url>
-  <url><loc>https://lab.example.com/wangxiurui.html</loc><priority>0.4</priority></url>
-  <url><loc>https://lab.example.com/liyongchen.html</loc><priority>0.4</priority></url>
-  <url><loc>https://lab.example.com/kuangwenchao.html</loc><priority>0.4</priority></url>
-  <url><loc>https://lab.example.com/liuwenjing.html</loc><priority>0.4</priority></url>
+  <url><loc>https://lab.example.com/people.html</loc><priority>0.8</priority></url>
+  <url><loc>https://lab.example.com/publications.html</loc><priority>0.9</priority></url>
+  <url><loc>https://lab.example.com/gallery.html</loc><priority>0.6</priority></url>
+  <url><loc>https://lab.example.com/contact.html</loc><priority>0.7</priority></url>
 </urlset>

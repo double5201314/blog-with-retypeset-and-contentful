@@ -3,208 +3,82 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>联系我们 · 多模态数据处理实验室</title>
-<meta name="description" content="多模态数据处理实验室联系方式：安徽省合肥市蜀山区莲花路 1688 号 躬行楼 201。">
-<link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
+<title data-zh="联系 · 多模态数据处理实验室" data-en="Contact · LMDP">联系 · 多模态数据处理实验室</title>
+<meta name="description" content="实验室地址、邮箱、电话与招生信息。" data-zh="实验室地址、邮箱、电话与招生信息。" data-en="Address, email, phone and admissions.">
+<meta name="theme-color" content="#3f51b5">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-<div class="topbar">
-  <div class="wrap">
-    <div class="topbar__org">合肥师范学院 <span>|</span> 计算机与人工智能学院</div>
-    <div class="topbar__links">
-      <a href="join.html">招生招聘</a>
-      <a href="contact.html">来访指引</a>
-      <a href="#" class="topbar__lang">中文 / EN</a>
-    </div>
-  </div>
-</div>
-
 <header class="site-header">
-  <div class="wrap site-header__inner">
-    <a class="brand" href="index.html">
-      <span class="brand__mark">LMDP</span>
+  <div class="site-header__inner">
+    <a class="brand" href="index.html" aria-label="LMDP">
+      <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="3.1" fill="currentColor"/><ellipse cx="20" cy="20" rx="16.4" ry="6.6" stroke="currentColor" stroke-width="1.15"/><ellipse cx="20" cy="20" rx="16.4" ry="6.6" stroke="currentColor" stroke-width="1.15" transform="rotate(60 20 20)"/><ellipse cx="20" cy="20" rx="16.4" ry="6.6" stroke="currentColor" stroke-width="1.15" transform="rotate(120 20 20)"/></svg>
       <span class="brand__text">
-        <span class="brand__cn">多模态数据处理实验室</span>
-        <span class="brand__en">Lab for Multimodal Data Processing</span>
+        <span class="brand__label">Lab for Multimodal Data Processing</span>
+        <span class="brand__word"><b>LMDP</b><span data-zh="多模态数据处理实验室" data-en="Hefei Normal University">多模态数据处理实验室</span></span>
       </span>
     </a>
 
-    <nav class="nav" id="nav" aria-label="主导航">
-      <div class="nav__item">
-        <a class="nav__link" href="index.html">首页</a>
-      </div>
-      <div class="nav__item">
-        <a class="nav__link" href="about.html">实验室概况<span class="caret"></span></a>
-        <div class="subnav">
-          <a href="about.html">实验室简介</a>
-          <a href="research.html">研究方向</a>
-          <a href="members.html">团队成员</a>
-          <a href="about.html#platform">实验条件</a>
-        </div>
-      </div>
-      <div class="nav__item">
-        <a class="nav__link" href="publications.html">科研成果<span class="caret"></span></a>
-        <div class="subnav">
-          <a href="publications.html">论文成果</a>
-          <a href="research.html#opensource">开源与数据</a>
-        </div>
-      </div>
-      <div class="nav__item">
-        <a class="nav__link" href="news.html">新闻动态<span class="caret"></span></a>
-        <div class="subnav">
-          <a href="news.html">实验室新闻</a>
-          <a href="news.html#events">学术活动</a>
-        </div>
-      </div>
-      <div class="nav__item">
-        <a class="nav__link" href="join.html">加入我们</a>
-      </div>
-      <div class="nav__item">
-        <a class="nav__link" href="contact.html">联系我们</a>
-      </div>
+    <nav class="nav" id="siteNav" aria-label="主导航">
+        <a href="index.html" data-zh="首页" data-en="Home">首页</a>
+        <a href="news.html" data-zh="动态" data-en="News">动态</a>
+        <a href="people.html" data-zh="成员" data-en="People">成员</a>
+        <a href="publications.html" data-zh="论文" data-en="Publications">论文</a>
+        <a href="gallery.html" data-zh="相册" data-en="Gallery">相册</a>
+        <a href="contact.html" class="is-active" data-zh="联系" data-en="Contact">联系</a>
+      <span class="lang" role="group" aria-label="语言 / Language">
+        <button type="button" data-lang="zh" aria-pressed="true">中文</button>
+        <span>/</span>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </span>
     </nav>
 
-
-    <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false" aria-controls="nav"><span></span></button>
+    <button class="nav-toggle" type="button" aria-label="展开导航" aria-expanded="false" aria-controls="siteNav"><i></i></button>
   </div>
 </header>
 
 <main>
-
-  <section class="page-hero">
-    <div class="wrap">
-      <div class="page-hero__crumb"><a href="index.html">首页</a> <span>/</span> <span>联系我们</span></div>
-      <h1>联系我们</h1>
-      <div class="page-hero__en">Contact</div>
-      <p class="page-hero__desc">招生咨询、合作研究、来访交流，都可以直接写信给我们。</p>
+  <div class="container">
+    <div class="page-title">
+      <h1 data-zh="联系" data-en="Contact">联系</h1>
+      <p data-zh="欢迎就合作、招生与学术交流与我们联系" data-en="For collaboration, admissions or academic exchange">欢迎就合作、招生与学术交流与我们联系</p>
     </div>
-  </section>
 
-  <section class="section">
-    <div class="wrap">
-
-      <div class="contact-grid" style="margin-bottom:28px;">
-        <div class="contact-card">
-          <h3>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s7-5.3 7-11a7 7 0 1 0-14 0c0 5.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-            实验室地址
-          </h3>
-          <p>安徽省合肥市蜀山区莲花路 1688 号</p>
-          <p>合肥师范学院 · 躬行楼 201</p>
+    <section class="section" style="margin-top:48px;">
+      <div class="info-rows">
+        <div class="info-row">
+          <div class="info-row__label" data-zh="地址" data-en="Address">地址</div>
+          <div class="info-row__value" data-zh="安徽省合肥市经济技术开发区莲花路 1688 号<br>合肥师范学院锦绣校区 躬行楼 201" data-en="Room 201, Gongxing Building, Jinxiu Campus<br>Hefei Normal University, 1688 Lianhua Road, Hefei, Anhui, China">安徽省合肥市经济技术开发区莲花路 1688 号<br>合肥师范学院锦绣校区 躬行楼 201</div>
         </div>
-        <div class="contact-card">
-          <h3>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            电子邮箱
-          </h3>
-          <p>实验室负责人：<a href="mailto:fjjiang@ustc.edu.cn">fjjiang@ustc.edu.cn</a></p>
-          <p>招生与合作请使用同一邮箱，标题注明来意</p>
+        <div class="info-row">
+          <div class="info-row__label" data-zh="邮箱" data-en="Email">邮箱</div>
+          <div class="info-row__value"><a href="mailto:fjjiang@ustc.edu.cn">fjjiang@ustc.edu.cn</a></div>
         </div>
-        <div class="contact-card">
-          <h3>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
-            联系电话
-          </h3>
-          <p>办公电话：139 6670 8365（蒋老师）</p>
-          <p>建议优先使用邮件联系，回复更及时</p>
+        <div class="info-row">
+          <div class="info-row__label" data-zh="电话" data-en="Phone">电话</div>
+          <div class="info-row__value">139 6670 8365</div>
         </div>
-        <div class="contact-card">
-          <h3>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16v10H4z"/><path d="M8 7V5h8v2"/><path d="M4 12h16"/></svg>
-            材料邮寄
-          </h3>
-          <p>收件人：多模态数据处理实验室（蒋老师收）</p>
-          <p>地址同上，请注明「申请材料」或「合作材料」</p>
+        <div class="info-row">
+          <div class="info-row__label" data-zh="招生" data-en="Admissions">招生</div>
+          <div class="info-row__value" data-zh="每年招收硕士研究生，方向为多模态数据处理相关。邮件联系时请附成绩单与个人简历。" data-en="We admit master’s students each year in multimodal data processing. Please include your transcript and CV in your email.">每年招收硕士研究生，方向为多模态数据处理相关。邮件联系时请附成绩单与个人简历。</div>
         </div>
       </div>
 
-      <figure class="map-embed" style="margin:0 0 56px;">
-        <div id="campusMap" class="map-embed__canvas" role="application" aria-label="合肥师范学院锦绣校区地图"></div>
-        <figcaption class="map-embed__bar">
-          <span>合肥师范学院锦绣校区 · 躬行楼 201</span>
-          <span class="map-embed__links">
-            <a href="https://uri.amap.com/marker?position=117.228568,31.750345&amp;name=%E5%A4%9A%E6%A8%A1%E6%80%81%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;coordinate=gaode&amp;callnative=0" target="_blank" rel="noopener">在高德地图打开</a>
-            <a href="https://www.openstreetmap.org/?mlat=31.75233&amp;mlon=117.22309#map=16/31.75233/117.22309" target="_blank" rel="noopener">在 OpenStreetMap 查看</a>
+      <div class="map">
+        <div id="campusMap" class="map__canvas" role="application" aria-label="合肥师范学院锦绣校区地图"></div>
+        <div class="map__foot">
+          <span data-zh="合肥师范学院锦绣校区 · 躬行楼 201" data-en="Jinxiu Campus, Hefei Normal University · Room 201, Gongxing Building">合肥师范学院锦绣校区 · 躬行楼 201</span>
+          <span>
+            <a href="https://uri.amap.com/marker?position=117.228568,31.750345&amp;name=%E5%A4%9A%E6%A8%A1%E6%80%81%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;coordinate=gaode&amp;callnative=0" target="_blank" rel="noopener" data-zh="在高德地图打开" data-en="Open in Amap">在高德地图打开</a>
           </span>
-        </figcaption>
-      </figure>
-
-      <div class="prose" style="max-width:820px;">
-        <h2>来访指引</h2>
-        <p>
-          实验室位于合肥师范学院躬行楼 201。到达校区后沿主路前往躬行楼，上至二层即可看到实验室门牌。
-        </p>
-        <h3>预约</h3>
-        <p>
-          参观实验室或洽谈合作，请提前 3 个工作日发邮件预约，说明来访人数、时间与事由，由实验室成员陪同参观。
-        </p>
-        <h3>自驾与停车</h3>
-        <p>
-          导航至「合肥师范学院」。校内停车需提前报备车牌号，请在预约邮件中一并提供。
-        </p>
-        <h3>来访须知</h3>
-        <ul>
-          <li>进入实验楼需登记，请携带身份证件；</li>
-          <li>实验平台与正在进行中的实验，未经许可请勿拍摄；</li>
-          <li>组会时间（每周一 19:00–20:00）不安排参观，以免影响汇报。</li>
-        </ul>
+        </div>
       </div>
-
-    </div>
-  </section>
-
+    </section>
+  </div>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="site-footer__main">
-      <div>
-        <a class="brand" href="index.html">
-          <span class="brand__mark">LMDP</span>
-          <span class="brand__text">
-            <span class="brand__cn">多模态数据处理实验室</span>
-            <span class="brand__en">Lab for Multimodal Data Processing</span>
-          </span>
-        </a>
-        <p class="site-footer__desc">合肥师范学院 计算机与人工智能学院<br>躬行楼 201</p>
-      </div>
-      <div>
-        <h4>快速导航</h4>
-        <ul>
-          <li><a href="about.html">实验室概况</a></li>
-          <li><a href="research.html">研究方向</a></li>
-          <li><a href="members.html">团队成员</a></li>
-          <li><a href="publications.html">论文成果</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>学术资源</h4>
-        <ul>
-          <li><a href="publications.html">论文列表</a></li>
-          <li><a href="research.html#opensource">开源与数据</a></li>
-          <li><a href="news.html#events">学术活动</a></li>
-          <li><a href="join.html">招生招聘</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>联系方式</h4>
-        <ul>
-          <li>邮箱：fjjiang@ustc.edu.cn</li>
-          <li>电话：139 6670 8365（蒋老师）</li>
-          <li>地址：安徽省合肥市蜀山区莲花路 1688 号</li>
-        </ul>
-      </div>
-    </div>
-    <div class="site-footer__bottom">
-      <span>© <span data-year>2026</span> 多模态数据处理实验室 · 合肥师范学院</span>
-      <span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">皖 ICP 备 00000000 号</a></span>
-    </div>
-  </div>
-</footer>
-
-<script src="assets/js/site.js"></script>
 <script src="assets/vendor/leaflet/leaflet.js"></script>
 <script>
 (function () {
@@ -222,13 +96,27 @@
 
   var icon = L.divIcon({
     className: 'map-pin',
-    html: '<svg width="28" height="38" viewBox="0 0 24 32" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12c0 9 12 20 12 20s12-11 12-20c0-6.6-5.4-12-12-12Z" fill="#1a6fd4"/><circle cx="12" cy="12" r="4.6" fill="#fff"/></svg>',
-    iconSize: [28, 38], iconAnchor: [14, 38], popupAnchor: [0, -34]
+    html: '<svg width="24" height="32" viewBox="0 0 24 32" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12c0 9 12 20 12 20s12-11 12-20c0-6.6-5.4-12-12-12Z" fill="#3f51b5"/><circle cx="12" cy="12" r="4.2" fill="#fff"/></svg>',
+    iconSize: [24, 32], iconAnchor: [12, 32], popupAnchor: [0, -30]
   });
 
   L.marker(pos, { icon: icon }).addTo(map)
-    .bindPopup('多模态数据处理实验室 · 躬行楼 201').openPopup();
+    .bindPopup('多模态数据处理实验室 · 躬行楼 201');
+
+  /* 容器有确定高度后再校正一次，避免瓦片错位 */
+  window.addEventListener('load', function () { map.invalidateSize(); });
+  setTimeout(function () { map.invalidateSize(); }, 250);
 })();
 </script>
+
+<footer class="site-footer">
+  <div class="container">
+    <p><strong data-zh="多模态数据处理实验室 · 合肥师范学院计算机与人工智能学院" data-en="Lab for Multimodal Data Processing · School of Computer Science and Artificial Intelligence, Hefei Normal University">多模态数据处理实验室 · 合肥师范学院计算机与人工智能学院</strong></p>
+    <p><span data-zh="安徽省合肥市经济技术开发区莲花路 1688 号 躬行楼 201" data-en="Room 201, Gongxing Building, 1688 Lianhua Road, Hefei, Anhui, China">安徽省合肥市经济技术开发区莲花路 1688 号 躬行楼 201</span> · <a href="mailto:fjjiang@ustc.edu.cn">fjjiang@ustc.edu.cn</a></p>
+    <p>© 2026 LMDP</p>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
 </body>
 </html>

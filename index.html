@@ -3,489 +3,100 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>多模态数据处理实验室 · 首页</title>
-<meta name="description" content="合肥师范学院多模态数据处理实验室（LMDP）聚焦计算机视觉、图文匹配、语音识别与视听语音增强，开展多模态数据理解与生成研究。">
-<meta property="og:title" content="多模态数据处理实验室 · LMDP">
-<meta property="og:description" content="让机器同时理解文字、图像与声音。">
-<meta property="og:type" content="website">
+<title data-zh="多模态数据处理实验室 · 合肥师范学院" data-en="LMDP · Hefei Normal University">多模态数据处理实验室 · 合肥师范学院</title>
+<meta name="description" content="多模态数据处理实验室（LMDP）隶属合肥师范学院计算机与人工智能学院，研究图像、文本与语音的联合理解。" data-zh="多模态数据处理实验室（LMDP）隶属合肥师范学院计算机与人工智能学院，研究图像、文本与语音的联合理解。" data-en="The Lab for Multimodal Data Processing (LMDP), Hefei Normal University, studies how machines understand images, text and speech together.">
+<meta name="theme-color" content="#3f51b5">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="page-home">
-
-<!-- ============ 顶部信息条 ============ -->
-<div class="topbar">
-  <div class="wrap">
-    <div class="topbar__org">
-      合肥师范学院 <span>|</span> 计算机与人工智能学院
-    </div>
-    <div class="topbar__links">
-      <a href="join.html">招生招聘</a>
-      <a href="contact.html">来访指引</a>
-      <a href="#" class="topbar__lang">中文 / EN</a>
-    </div>
-  </div>
-</div>
-
-<!-- ============ 页头 ============ -->
+<body>
 <header class="site-header">
-  <div class="wrap site-header__inner">
-    <a class="brand" href="index.html">
-      <span class="brand__mark">LMDP</span>
+  <div class="site-header__inner">
+    <a class="brand" href="index.html" aria-label="LMDP">
+      <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="3.1" fill="currentColor"/><ellipse cx="20" cy="20" rx="16.4" ry="6.6" stroke="currentColor" stroke-width="1.15"/><ellipse cx="20" cy="20" rx="16.4" ry="6.6" stroke="currentColor" stroke-width="1.15" transform="rotate(60 20 20)"/><ellipse cx="20" cy="20" rx="16.4" ry="6.6" stroke="currentColor" stroke-width="1.15" transform="rotate(120 20 20)"/></svg>
       <span class="brand__text">
-        <span class="brand__cn">多模态数据处理实验室</span>
-        <span class="brand__en">Lab for Multimodal Data Processing</span>
+        <span class="brand__label">Lab for Multimodal Data Processing</span>
+        <span class="brand__word"><b>LMDP</b><span data-zh="多模态数据处理实验室" data-en="Hefei Normal University">多模态数据处理实验室</span></span>
       </span>
     </a>
 
-    <nav class="nav" id="nav" aria-label="主导航">
-      <div class="nav__item">
-        <a class="nav__link" href="index.html">首页</a>
-      </div>
-      <div class="nav__item">
-        <a class="nav__link" href="about.html">实验室概况<span class="caret"></span></a>
-        <div class="subnav">
-          <a href="about.html">实验室简介</a>
-          <a href="research.html">研究方向</a>
-          <a href="members.html">团队成员</a>
-          <a href="about.html#platform">实验条件</a>
-        </div>
-      </div>
-      <div class="nav__item">
-        <a class="nav__link" href="publications.html">科研成果<span class="caret"></span></a>
-        <div class="subnav">
-          <a href="publications.html">论文成果</a>
-          <a href="research.html#opensource">开源与数据</a>
-        </div>
-      </div>
-      <div class="nav__item">
-        <a class="nav__link" href="news.html">新闻动态<span class="caret"></span></a>
-        <div class="subnav">
-          <a href="news.html">实验室新闻</a>
-          <a href="news.html#events">学术活动</a>
-        </div>
-      </div>
-      <div class="nav__item">
-        <a class="nav__link" href="join.html">加入我们</a>
-      </div>
-      <div class="nav__item">
-        <a class="nav__link" href="contact.html">联系我们</a>
-      </div>
+    <nav class="nav" id="siteNav" aria-label="主导航">
+        <a href="index.html" class="is-active" data-zh="首页" data-en="Home">首页</a>
+        <a href="news.html" data-zh="动态" data-en="News">动态</a>
+        <a href="people.html" data-zh="成员" data-en="People">成员</a>
+        <a href="publications.html" data-zh="论文" data-en="Publications">论文</a>
+        <a href="gallery.html" data-zh="相册" data-en="Gallery">相册</a>
+        <a href="contact.html" data-zh="联系" data-en="Contact">联系</a>
+      <span class="lang" role="group" aria-label="语言 / Language">
+        <button type="button" data-lang="zh" aria-pressed="true">中文</button>
+        <span>/</span>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </span>
     </nav>
 
-    <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false" aria-controls="nav">
-      <span></span>
-    </button>
+    <button class="nav-toggle" type="button" aria-label="展开导航" aria-expanded="false" aria-controls="siteNav"><i></i></button>
   </div>
 </header>
 
 <main>
+  <div class="container">
 
-  <!-- ============ 通栏活动图片（横向滑动图集） ============ -->
-  <section class="banner" aria-label="实验室活动图片">
-    <div class="banner__viewport">
-      <div class="banner__track">
-
-        <a class="banner__slide is-active" href="news.html#ai-conf-2026-photos" aria-label="查看活动：2026 人工智能前沿学术会议">
-          <img src="assets/img/banner-conf-keynote.jpg" alt="2026 人工智能前沿学术会议大会报告现场" width="1400" height="560">
-          <span class="banner__caption">
-            <span class="wrap">
-              <time datetime="2026-10-17">2026.10.17</time>
-              <span>2026 人工智能前沿学术会议 · 大会报告</span>
-              <em>查看活动 →</em>
-            </span>
-          </span>
-        </a>
-
-        <a class="banner__slide" href="news.html#ai-conf-2026-photos" aria-label="查看活动：2026 人工智能前沿学术会议主会场">
-          <img src="assets/img/banner-conf-hall.jpg" alt="2026 人工智能前沿学术会议主会场" width="1400" height="560" loading="lazy">
-          <span class="banner__caption">
-            <span class="wrap">
-              <time datetime="2026-10-17">2026.10.17</time>
-              <span>2026 人工智能前沿学术会议 · 主会场</span>
-              <em>查看活动 →</em>
-            </span>
-          </span>
-        </a>
-
-        <a class="banner__slide" href="news.html#cicc-2026-photos" aria-label="查看活动：中国工业计算机大会暨第二十三届学术年会">
-          <img src="assets/img/banner-cicc-keynote.jpg" alt="中国工业计算机大会大会报告现场" width="1400" height="560" loading="lazy">
-          <span class="banner__caption">
-            <span class="wrap">
-              <time datetime="2026-09-12">2026.09.12</time>
-              <span>中国工业计算机大会暨第二十三届学术年会 · 大会报告</span>
-              <em>查看活动 →</em>
-            </span>
-          </span>
-        </a>
-
-        <a class="banner__slide" href="news.html#cicc-2026-photos" aria-label="查看活动：中国工业计算机大会主会场">
-          <img src="assets/img/banner-cicc-hall.jpg" alt="中国工业计算机大会主会场" width="1400" height="560" loading="lazy">
-          <span class="banner__caption">
-            <span class="wrap">
-              <time datetime="2026-09-12">2026.09.12</time>
-              <span>中国工业计算机大会暨第二十三届学术年会 · 主会场</span>
-              <em>查看活动 →</em>
-            </span>
-          </span>
-        </a>
-
-        <a class="banner__slide" href="about.html#platform" aria-label="查看实验室环境">
-          <img src="assets/img/lab-room.jpg" alt="实验室环境：工位、讨论区与白板" width="900" height="1125" loading="lazy">
-          <span class="banner__caption">
-            <span class="wrap">
-              <time datetime="2026">实验室</time>
-              <span>躬行楼 201 · 工位与讨论区</span>
-              <em>实验条件 →</em>
-            </span>
-          </span>
-        </a>
-
-      </div>
+    <div class="page-title">
+      <h1 data-zh="多模态数据处理实验室" data-en="Lab for Multimodal Data Processing">多模态数据处理实验室</h1>
+      <p data-zh="Lab for Multimodal Data Processing · Hefei Normal University" data-en="Hefei Normal University · School of Computer Science and Artificial Intelligence">Lab for Multimodal Data Processing · Hefei Normal University</p>
     </div>
 
-    <button class="banner__arrow banner__arrow--prev" type="button" aria-label="上一张">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
-    </button>
-    <button class="banner__arrow banner__arrow--next" type="button" aria-label="下一张">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
-    </button>
-    <div class="banner__dots" aria-label="选择图片"></div>
-  </section>
+    <section class="intro">
+      <p data-zh="多模态数据处理实验室（Lab for Multimodal Data Processing，LMDP）隶属合肥师范学院计算机与人工智能学院。我们研究机器如何同时理解图像、文本与语音，关注多模态表示、跨模态对齐，以及这些方法在真实数据上是否依然可用。" data-en="The Lab for Multimodal Data Processing (LMDP) is part of the School of Computer Science and Artificial Intelligence at Hefei Normal University. We study how machines can understand images, text and speech together, with a focus on multimodal representation, cross-modal alignment, and whether these methods still hold up on real data.">多模态数据处理实验室（Lab for Multimodal Data Processing，LMDP）隶属合肥师范学院计算机与人工智能学院。我们研究机器如何同时理解图像、文本与语音，关注多模态表示、跨模态对齐，以及这些方法在真实数据上是否依然可用。</p>
+      <p data-zh="实验室现有教师 3 人、硕士研究生 4 名，围绕计算机视觉、图文匹配、目标跟踪、语音识别与视听语音增强开展工作，并与国内外同行保持合作。" data-en="The lab currently has three faculty members and four master’s students, working on computer vision, image–text matching, object tracking, speech recognition and audio-visual speech enhancement, with collaborators in China and abroad.">实验室现有教师 3 人、硕士研究生 4 名，围绕计算机视觉、图文匹配、目标跟踪、语音识别与视听语音增强开展工作，并与国内外同行保持合作。</p>
 
-  <!-- ============ 实验室介绍 ============ -->
-  <section class="about-section">
-    <div class="wrap">
-      <div class="about-grid">
-        <div class="about-text">
-          <p class="section-head__label">About the Lab</p>
-          <h1>让机器同时理解文字、图像与声音</h1>
-          <p>
-            多模态数据处理实验室（Lab for Multimodal Data Processing，LMDP）依托合肥师范学院计算机与人工智能学院，围绕图像、文本与语音的联合理解开展研究。
-          </p>
-          <p>
-            我们关心三个更慢但更重要的问题：多模态数据如何被准确表示、如何在语义层面真正对齐、以及在没有大规模标注的条件下如何依然可用。实验室坚持「论文里的方法要能跑起来」——
-            每个方向都配有可复现的实验与可交付的代码。
-          </p>
+      <ul class="areas">
+        <li><span><b data-zh="多模态表示与对齐" data-en="Multimodal representation &amp; alignment">多模态表示与对齐</b><em data-zh="图像、文本与语音的联合表示" data-en="Joint representation of image, text and speech">图像、文本与语音的联合表示</em></span></li>
+        <li><span><b data-zh="视觉显著性与图像描述" data-en="Visual saliency &amp; image captioning">视觉显著性与图像描述</b><em data-zh="区域级视觉理解与语言生成" data-en="Region-level vision and language generation">区域级视觉理解与语言生成</em></span></li>
+        <li><span><b data-zh="多模态目标跟踪" data-en="Multimodal object tracking">多模态目标跟踪</b><em data-zh="复杂运动下的身份关联" data-en="Identity association under complex motion">复杂运动下的身份关联</em></span></li>
+        <li><span><b data-zh="语音识别与视听语音增强" data-en="Speech recognition &amp; audio-visual enhancement">语音识别与视听语音增强</b><em data-zh="噪声条件下的可懂度" data-en="Intelligibility in noisy conditions">噪声条件下的可懂度</em></span></li>
+      </ul>
+    </section>
 
-          <div class="about-stats">
-            <div>
-              <div class="about-stats__num">3<small>位</small></div>
-              <div class="about-stats__label">教师（副教授 2 · 讲师 1）</div>
-            </div>
-            <div>
-              <div class="about-stats__num">5<small>个</small></div>
-              <div class="about-stats__label">研究方向</div>
-            </div>
-            <div>
-              <div class="about-stats__num">4<small>名</small></div>
-              <div class="about-stats__label">在读研究生</div>
-            </div>
-            <div>
-              <div class="about-stats__num">TMM<small>2026</small></div>
-              <div class="about-stats__label">CCF A 类期刊</div>
-            </div>
-          </div>
-
-          <div class="about-actions">
-            <a class="btn btn--sky" href="about.html">
-              了解实验室概况
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-            <a class="btn btn--line" href="join.html">招生信息</a>
-          </div>
+    <section class="section">
+      <h2 class="section__title"><b data-zh="最新动态" data-en="Latest News">最新动态</b></h2>
+      <ul class="news-list">
+      <li class="news-item">
+        <div class="news-item__main">
+          <p class="news-item__meta">2026.10.16</p>
+          <h3 class="news-item__title" data-zh="参加 2026 人工智能前沿学术会议" data-en="Attended the 2026 Conference on Frontiers of Artificial Intelligence">参加 2026 人工智能前沿学术会议</h3>
+          <p class="news-item__excerpt" data-zh="会议于 10 月 16—18 日在合肥召开。杨善林、蒋昌俊、吴枫等院士及国家级高层次人才作大会报告，议题包括具身智能、多模态理解等。实验室成员参会交流。" data-en="Held in Hefei on 16–18 October. Academicians Shanlin Yang, Changjun Jiang and Feng Wu gave keynote talks covering embodied intelligence and multimodal understanding. Lab members attended.">会议于 10 月 16—18 日在合肥召开。杨善林、蒋昌俊、吴枫等院士及国家级高层次人才作大会报告，议题包括具身智能、多模态理解等。实验室成员参会交流。</p>
         </div>
-
-        <a class="about-figure" href="about.html" aria-label="查看实验室详细介绍">
-          <img src="assets/img/lab-room.jpg" alt="实验室环境：工位、讨论区与白板" width="900" height="1125" loading="lazy">
-          <span class="about-figure__hint">
-            查看实验室详情
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 科学研究 ============ -->
-  <section class="section section--soft">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="section-head__label">Research</div>
-          <h2>科学研究</h2>
-          <p class="section-head__desc">
-            五个方向围绕同一条主线：数据如何被表示、如何被对齐、如何在真实场景里用起来。
-          </p>
+        <p class="news-item__badge">AI 2026</p>
+      </li>
+      <li class="news-item">
+        <div class="news-item__main">
+          <p class="news-item__meta">2026.09.11</p>
+          <h3 class="news-item__title" data-zh="参加中国工业计算机大会暨第二十三届学术年会" data-en="Attended CCF ICCC 2026">参加中国工业计算机大会暨第二十三届学术年会</h3>
+          <p class="news-item__excerpt" data-zh="9 月 11—13 日，CCF ICCC 2026 在合肥召开，主题为「数智工控·合创未来」，议题覆盖工业智能、智能制造与工业安全等方向。" data-en="The 23rd CCF Industrial Computer Conference was held in Hefei on 11–13 September under the theme “Digital Intelligent Industrial Control”.">9 月 11—13 日，CCF ICCC 2026 在合肥召开，主题为「数智工控·合创未来」，议题覆盖工业智能、智能制造与工业安全等方向。</p>
         </div>
-        <a class="more-link" href="research.html">
-          更多
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-
-      <div class="research-grid">
-        <a class="rcard" href="research.html#vision">
-          <div class="rcard__media">
-            <img src="assets/img/r-vision.jpg" alt="计算机视觉" width="800" height="600" loading="lazy">
-          </div>
-          <div class="rcard__body">
-            <div class="rcard__index">RESEARCH 01</div>
-            <h3>计算机视觉<br>从网格到区域</h3>
-            <p>视觉显著性、区域级表示与图像描述。SMART（TMM 2026）用自适应区域特征替代固定网格，缓解语义碎片化。</p>
-            <span class="rcard__more">了解研究内容 →</span>
-          </div>
-        </a>
-
-        <a class="rcard" href="research.html#matching">
-          <div class="rcard__media">
-            <img src="assets/img/r-matching.jpg" alt="图文匹配" width="800" height="600" loading="lazy">
-          </div>
-          <div class="rcard__body">
-            <div class="rcard__index">RESEARCH 02</div>
-            <h3>图文匹配<br>让图文对上</h3>
-            <p>区域—短语级的细粒度对齐，以及跨模态检索中的负样本构造与难例挖掘。</p>
-            <span class="rcard__more">了解研究内容 →</span>
-          </div>
-        </a>
-
-        <a class="rcard" href="research.html#text">
-          <div class="rcard__media">
-            <img src="assets/img/r-text.jpg" alt="文本识别" width="800" height="600" loading="lazy">
-          </div>
-          <div class="rcard__body">
-            <div class="rcard__index">RESEARCH 03</div>
-            <h3>文本识别<br>为语义提供入口</h3>
-            <p>场景文字检测与识别、文档结构理解，处理透视畸变、低对比度与多语言混排。</p>
-            <span class="rcard__more">了解研究内容 →</span>
-          </div>
-        </a>
-
-        <a class="rcard" href="research.html#speech">
-          <div class="rcard__media">
-            <img src="assets/img/r-speech.jpg" alt="语音识别" width="800" height="600" loading="lazy">
-          </div>
-          <div class="rcard__body">
-            <div class="rcard__index">RESEARCH 04</div>
-            <h3>语音识别<br>在噪声里听清</h3>
-            <p>中文语音识别与噪声条件下的鲁棒性，关注低资源场景的模型适配与数据增广。</p>
-            <span class="rcard__more">了解研究内容 →</span>
-          </div>
-        </a>
-
-        <a class="rcard" href="research.html#avse">
-          <div class="rcard__media">
-            <img src="assets/img/r-avse.jpg" alt="视听语音增强" width="800" height="600" loading="lazy">
-          </div>
-          <div class="rcard__body">
-            <div class="rcard__index">RESEARCH 05</div>
-            <h3>视听语音增强<br>看口型，补声音</h3>
-            <p>用唇动等视觉线索辅助语音分离，在强噪声下恢复可懂度。与 Amir Hussain 教授团队合作。</p>
-            <span class="rcard__more">了解研究内容 →</span>
-          </div>
-        </a>
-
-        <a class="rcard" href="research.html#collab">
-          <div class="rcard__media">
-            <img src="assets/img/r-intl.jpg" alt="国际合作" width="800" height="600" loading="lazy">
-          </div>
-          <div class="rcard__body">
-            <div class="rcard__index">RESEARCH 06</div>
-            <h3>国际合作<br>把合作做实</h3>
-            <p>与英国斯特灵大学 Amir Hussain 教授团队联合开展视听语音增强研究，目前有两名研究生参与。</p>
-            <span class="rcard__more">了解研究内容 →</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 新闻和学术活动 ============ -->
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="section-head__label">News &amp; Events</div>
-          <h2>新闻和学术活动</h2>
+        <p class="news-item__badge">CCF ICCC</p>
+      </li>
+      <li class="news-item">
+        <div class="news-item__main">
+          <p class="news-item__meta">2026</p>
+          <h3 class="news-item__title" data-zh="论文 SMART 被 IEEE Transactions on Multimedia 接收" data-en="Paper accepted by IEEE Transactions on Multimedia">论文 SMART 被 IEEE Transactions on Multimedia 接收</h3>
+          <p class="news-item__excerpt" data-zh="论文提出语义合并的自适应区域 Transformer，用区域级表示替代固定网格特征，缓解图像描述中的语义碎片化问题。" data-en="SMART replaces fixed-grid features with semantic-merged adaptive regions, reducing semantic fragmentation in image captioning.">论文提出语义合并的自适应区域 Transformer，用区域级表示替代固定网格特征，缓解图像描述中的语义碎片化问题。</p>
         </div>
-        <a class="more-link" href="news.html">
-          更多
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
+        <p class="news-item__badge">IEEE TMM</p>
+      </li>
+      </ul>
+      <a class="more-link" href="news.html" data-zh="全部动态" data-en="All news">全部动态</a>
+    </section>
 
-      <div class="news-showcase">
-        <div class="mini" aria-label="活动图片轮播">
-          <div class="mini__frame">
-            <a class="mini__slide is-active" href="news.html#ai-conf-2026-photos">
-              <img src="assets/img/conference-keynote.jpg" alt="2026 人工智能前沿学术会议大会报告" width="1400" height="933">
-              <span class="mini__caption"><time>2026.10.17</time><span>2026 人工智能前沿学术会议 · 大会报告</span></span>
-            </a>
-            <a class="mini__slide" href="news.html#ai-conf-2026-photos">
-              <img src="assets/img/conference-hall.jpg" alt="2026 人工智能前沿学术会议主会场" width="1400" height="933" loading="lazy">
-              <span class="mini__caption"><time>2026.10.17</time><span>会议主会场</span></span>
-            </a>
-            <a class="mini__slide" href="news.html#cicc-2026-photos">
-              <img src="assets/img/cicc-keynote.jpg" alt="中国工业计算机大会大会报告" width="1400" height="933" loading="lazy">
-              <span class="mini__caption"><time>2026.09.12</time><span>中国工业计算机大会 · 大会报告</span></span>
-            </a>
-            <a class="mini__slide" href="news.html#cicc-2026-photos">
-              <img src="assets/img/cicc-hall.jpg" alt="中国工业计算机大会主会场" width="1400" height="933" loading="lazy">
-              <span class="mini__caption"><time>2026.09.12</time><span>大会主会场</span></span>
-            </a>
-          </div>
-          <div class="mini__dots"></div>
-        </div>
-
-        <div class="news-list">
-          <a class="news-item" href="news.html#ai-conf-2026">
-            <div class="news-item__date"><div class="news-item__day">10.17</div><div class="news-item__ym">2026</div></div>
-            <div>
-              <h3 class="news-item__title">实验室成员参加 2026 人工智能前沿学术会议</h3>
-              <p class="news-item__excerpt">会议于 10 月 16—18 日在合肥召开，杨善林、蒋昌俊、吴枫等院士及国家级高层次人才作报告，实验室成员参会交流。</p>
-            </div>
-          </a>
-          <a class="news-item" href="publications.html">
-            <div class="news-item__date"><div class="news-item__day">10.10</div><div class="news-item__ym">2026</div></div>
-            <div>
-              <h3 class="news-item__title">论文 SMART 被 IEEE TMM 接收</h3>
-              <p class="news-item__excerpt">提出语义合并的自适应区域 Transformer，缓解网格特征导致的语义碎片化，用于图像描述生成。</p>
-            </div>
-          </a>
-          <a class="news-item" href="news.html#cicc-2026">
-            <div class="news-item__date"><div class="news-item__day">09.12</div><div class="news-item__ym">2026</div></div>
-            <div>
-              <h3 class="news-item__title">参加中国工业计算机大会暨第二十三届学术年会</h3>
-              <p class="news-item__excerpt">CCF ICCC 2026 于 9 月 11—13 日在合肥召开，主题「数智工控·合创未来」，实验室成员参会交流。</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 更多内容 ============ -->
-  <section class="section section--soft">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="section-head__label">More</div>
-          <h2>更多内容</h2>
-        </div>
-      </div>
-
-      <div class="more-grid">
-        <div class="more-tile">
-          <img src="assets/img/more-team.jpg" alt="科研团队" width="900" height="900" loading="lazy">
-          <div class="more-tile__body">
-            <h3>科研团队</h3>
-            <div class="more-tile__pills">
-              <a class="tile-pill tile-pill--solid" href="members.html">教师</a>
-              <a class="tile-pill" href="members.html">研究生</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="more-tile">
-          <img src="assets/img/research-hero.jpg" alt="科研成果" width="1400" height="877" loading="lazy">
-          <div class="more-tile__body">
-            <h3>科研成果</h3>
-            <div class="more-tile__pills">
-              <a class="tile-pill tile-pill--solid" href="publications.html">论文成果</a>
-              <a class="tile-pill" href="research.html#opensource">开源与数据</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="more-tile">
-          <img src="assets/img/more-faq.jpg" alt="常见问题" width="900" height="900" loading="lazy">
-          <div class="more-tile__body">
-            <h3>常见问题</h3>
-            <div class="more-tile__pills">
-              <a class="tile-pill tile-pill--solid" href="join.html">招生问答</a>
-              <a class="tile-pill" href="contact.html">联系咨询</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="more-tile">
-          <img src="assets/img/more-collab.jpg" alt="合作支持" width="900" height="900" loading="lazy">
-          <div class="more-tile__body">
-            <h3>合作支持</h3>
-            <div class="more-tile__pills">
-              <a class="tile-pill tile-pill--solid" href="contact.html">联系我们</a>
-              <a class="tile-pill" href="research.html#avse">国际合作</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="more-tile more-tile--wide more-tile--plain">
-          <div class="more-tile__body">
-            <h3>加入我们</h3>
-            <p class="more-tile__note">欢迎优秀的你加入 LMDP。课题组目前只招收硕士研究生。</p>
-            <div class="more-tile__pills">
-              <a class="tile-pill tile-pill--solid" href="join.html">硕士研究生</a>
-              <a class="tile-pill" href="join.html">申请流程</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  </div>
 </main>
 
-<!-- ============ 页脚 ============ -->
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="site-footer__main">
-      <div>
-        <a class="brand" href="index.html">
-          <span class="brand__mark">LMDP</span>
-          <span class="brand__text">
-            <span class="brand__cn">多模态数据处理实验室</span>
-            <span class="brand__en">Lab for Multimodal Data Processing</span>
-          </span>
-        </a>
-        <p class="site-footer__desc">
-          合肥师范学院 计算机与人工智能学院<br>
-          躬行楼 201
-        </p>
-      </div>
-
-      <div>
-        <h4>快速导航</h4>
-        <ul>
-          <li><a href="about.html">实验室概况</a></li>
-          <li><a href="research.html">研究方向</a></li>
-          <li><a href="members.html">团队成员</a></li>
-          <li><a href="publications.html">论文成果</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>学术资源</h4>
-        <ul>
-          <li><a href="publications.html">论文列表</a></li>
-          <li><a href="research.html#opensource">开源与数据</a></li>
-          <li><a href="news.html#events">学术活动</a></li>
-          <li><a href="join.html">招生招聘</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>联系方式</h4>
-        <ul>
-          <li>邮箱：fjjiang@ustc.edu.cn</li>
-          <li>电话：139 6670 8365（蒋老师）</li>
-          <li>地址：安徽省合肥市蜀山区莲花路 1688 号</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="site-footer__bottom">
-      <span>© <span data-year>2026</span> 多模态数据处理实验室 · 合肥师范学院</span>
-      <span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">皖 ICP 备 00000000 号</a></span>
-    </div>
+  <div class="container">
+    <p><strong data-zh="多模态数据处理实验室 · 合肥师范学院计算机与人工智能学院" data-en="Lab for Multimodal Data Processing · School of Computer Science and Artificial Intelligence, Hefei Normal University">多模态数据处理实验室 · 合肥师范学院计算机与人工智能学院</strong></p>
+    <p><span data-zh="安徽省合肥市经济技术开发区莲花路 1688 号 躬行楼 201" data-en="Room 201, Gongxing Building, 1688 Lianhua Road, Hefei, Anhui, China">安徽省合肥市经济技术开发区莲花路 1688 号 躬行楼 201</span> · <a href="mailto:fjjiang@ustc.edu.cn">fjjiang@ustc.edu.cn</a></p>
+    <p>© 2026 LMDP</p>
   </div>
 </footer>
 

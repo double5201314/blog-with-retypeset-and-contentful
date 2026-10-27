@@ -3,142 +3,56 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>页面不存在 · 多模态数据处理实验室</title>
-<meta name="robots" content="noindex">
+<title data-zh="页面不存在 · 多模态数据处理实验室" data-en="Page not found · LMDP">页面不存在 · 多模态数据处理实验室</title>
+<meta name="description" content="页面不存在。" data-zh="页面不存在。" data-en="The page you requested does not exist.">
+<meta name="theme-color" content="#3f51b5">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 <link rel="stylesheet" href="assets/css/style.css">
-<style>
-  .e404 { min-height: 68vh; display: grid; place-items: center; text-align: center; padding: 80px 0; }
-  .e404__code {
-    font-family: var(--font-en); font-size: clamp(64px, 12vw, 120px);
-    font-weight: 600; line-height: 1; letter-spacing: -.04em;
-    background: linear-gradient(140deg, var(--navy), var(--cyan));
-    -webkit-background-clip: text; background-clip: text; color: transparent;
-  }
-  .e404 h1 { font-size: 22px; margin: 18px 0 12px; }
-  .e404 p { color: var(--gray); margin-bottom: 28px; }
-</style>
 </head>
 <body>
-
-<div class="topbar">
-  <div class="wrap">
-    <div class="topbar__org">合肥师范学院 <span>|</span> 计算机与人工智能学院</div>
-    <div class="topbar__links">
-      <a href="join.html">招生招聘</a>
-      <a href="contact.html">来访指引</a>
-      <a href="#" class="topbar__lang">中文 / EN</a>
-    </div>
-  </div>
-</div>
-
 <header class="site-header">
-  <div class="wrap site-header__inner">
-    <a class="brand" href="index.html">
-      <span class="brand__mark">LMDP</span>
+  <div class="site-header__inner">
+    <a class="brand" href="index.html" aria-label="LMDP">
+      <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="3.1" fill="currentColor"/><ellipse cx="20" cy="20" rx="16.4" ry="6.6" stroke="currentColor" stroke-width="1.15"/><ellipse cx="20" cy="20" rx="16.4" ry="6.6" stroke="currentColor" stroke-width="1.15" transform="rotate(60 20 20)"/><ellipse cx="20" cy="20" rx="16.4" ry="6.6" stroke="currentColor" stroke-width="1.15" transform="rotate(120 20 20)"/></svg>
       <span class="brand__text">
-        <span class="brand__cn">多模态数据处理实验室</span>
-        <span class="brand__en">Lab for Multimodal Data Processing</span>
+        <span class="brand__label">Lab for Multimodal Data Processing</span>
+        <span class="brand__word"><b>LMDP</b><span data-zh="多模态数据处理实验室" data-en="Hefei Normal University">多模态数据处理实验室</span></span>
       </span>
     </a>
-        <nav class="nav" id="nav" aria-label="主导航">
-      <div class="nav__item">
-        <a class="nav__link" href="index.html">首页</a>
-      </div>
-      <div class="nav__item">
-        <a class="nav__link" href="about.html">实验室概况<span class="caret"></span></a>
-        <div class="subnav">
-          <a href="about.html">实验室简介</a>
-          <a href="research.html">研究方向</a>
-          <a href="members.html">团队成员</a>
-          <a href="about.html#platform">实验条件</a>
-        </div>
-      </div>
-      <div class="nav__item">
-        <a class="nav__link" href="publications.html">科研成果<span class="caret"></span></a>
-        <div class="subnav">
-          <a href="publications.html">论文成果</a>
-          <a href="research.html#opensource">开源与数据</a>
-        </div>
-      </div>
-      <div class="nav__item">
-        <a class="nav__link" href="news.html">新闻动态<span class="caret"></span></a>
-        <div class="subnav">
-          <a href="news.html">实验室新闻</a>
-          <a href="news.html#events">学术活动</a>
-        </div>
-      </div>
-      <div class="nav__item">
-        <a class="nav__link" href="join.html">加入我们</a>
-      </div>
-      <div class="nav__item">
-        <a class="nav__link" href="contact.html">联系我们</a>
-      </div>
+
+    <nav class="nav" id="siteNav" aria-label="主导航">
+        <a href="index.html" data-zh="首页" data-en="Home">首页</a>
+        <a href="news.html" data-zh="动态" data-en="News">动态</a>
+        <a href="people.html" data-zh="成员" data-en="People">成员</a>
+        <a href="publications.html" data-zh="论文" data-en="Publications">论文</a>
+        <a href="gallery.html" data-zh="相册" data-en="Gallery">相册</a>
+        <a href="contact.html" data-zh="联系" data-en="Contact">联系</a>
+      <span class="lang" role="group" aria-label="语言 / Language">
+        <button type="button" data-lang="zh" aria-pressed="true">中文</button>
+        <span>/</span>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </span>
     </nav>
-    <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false" aria-controls="nav"><span></span></button>
+
+    <button class="nav-toggle" type="button" aria-label="展开导航" aria-expanded="false" aria-controls="siteNav"><i></i></button>
   </div>
 </header>
 
 <main>
-  <div class="wrap">
-    <div class="e404">
-      <div>
-        <div class="e404__code">404</div>
-        <h1>这个页面不在实验室里</h1>
-        <p>你访问的地址可能已经调整，或者链接输入有误。</p>
-        <a class="btn btn--line" href="index.html">返回首页</a>
-      </div>
+  <div class="container">
+    <div class="page-title">
+      <h1>404</h1>
+      <p data-zh="这个页面不存在，或者已经被移走了。" data-en="This page does not exist or has been moved.">这个页面不存在，或者已经被移走了。</p>
+      <p style="margin-top:30px;"><a class="more-link" href="index.html" data-zh="返回首页" data-en="Back to home">返回首页</a></p>
     </div>
   </div>
 </main>
 
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="site-footer__main">
-      <div>
-        <a class="brand" href="index.html">
-          <span class="brand__mark">LMDP</span>
-          <span class="brand__text">
-            <span class="brand__cn">多模态数据处理实验室</span>
-            <span class="brand__en">Lab for Multimodal Data Processing</span>
-          </span>
-        </a>
-        <p class="site-footer__desc">合肥师范学院 计算机与人工智能学院<br>躬行楼 201</p>
-      </div>
-
-      <div>
-        <h4>快速导航</h4>
-        <ul>
-          <li><a href="about.html">实验室概况</a></li>
-          <li><a href="research.html">研究方向</a></li>
-          <li><a href="members.html">团队成员</a></li>
-          <li><a href="publications.html">论文成果</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>学术资源</h4>
-        <ul>
-          <li><a href="publications.html">论文列表</a></li>
-          <li><a href="research.html#opensource">开源与数据</a></li>
-          <li><a href="news.html#events">学术活动</a></li>
-          <li><a href="join.html">招生招聘</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>联系方式</h4>
-        <ul>
-          <li>邮箱：fjjiang@ustc.edu.cn</li>
-          <li>电话：139 6670 8365（蒋老师）</li>
-          <li>地址：安徽省合肥市蜀山区莲花路 1688 号</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="site-footer__bottom">
-      <span>© <span data-year>2026</span> 多模态数据处理实验室 · 合肥师范学院</span>
-      <span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">皖 ICP 备 00000000 号</a></span>
-    </div>
+  <div class="container">
+    <p><strong data-zh="多模态数据处理实验室 · 合肥师范学院计算机与人工智能学院" data-en="Lab for Multimodal Data Processing · School of Computer Science and Artificial Intelligence, Hefei Normal University">多模态数据处理实验室 · 合肥师范学院计算机与人工智能学院</strong></p>
+    <p><span data-zh="安徽省合肥市经济技术开发区莲花路 1688 号 躬行楼 201" data-en="Room 201, Gongxing Building, 1688 Lianhua Road, Hefei, Anhui, China">安徽省合肥市经济技术开发区莲花路 1688 号 躬行楼 201</span> · <a href="mailto:fjjiang@ustc.edu.cn">fjjiang@ustc.edu.cn</a></p>
+    <p>© 2026 LMDP</p>
   </div>
 </footer>
 
