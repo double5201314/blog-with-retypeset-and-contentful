@@ -106,9 +106,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   gap: 32px;
 }
 
-.brand { display: flex; align-items: center; gap: 12px; color: #fff; }
+.brand { display: flex; align-items: center; color: #fff; }
 .brand:hover { text-decoration: none; }
-.brand__mark { flex: none; width: 34px; height: 34px; color: #fff; }
 .brand__text { display: flex; flex-direction: column; line-height: 1.15; }
 .brand__label {
   font-size: 8.5px;
