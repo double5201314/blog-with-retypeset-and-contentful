@@ -108,6 +108,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .brand { display: flex; align-items: center; color: #fff; }
 .brand:hover { text-decoration: none; }
+/* 兜底：旧版页面顶栏里有一个原子图形，现已移除。
+   若浏览器仍缓存着旧 HTML（带 <svg>）而拿到新 CSS，该 SVG 会失去尺寸约束、
+   按默认 300×150 撑大整个顶栏，这里强制隐藏。 */
+.brand > svg { display: none !important; }
 .brand__text { display: flex; flex-direction: column; line-height: 1.15; }
 .brand__label {
   font-size: 8.5px;
@@ -137,16 +141,26 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .nav { display: flex; align-items: stretch; gap: 30px; height: 66px; }
 .nav a {
+  position: relative;
   display: flex;
   align-items: center;
   font-size: 14.5px;
   color: rgba(255, 255, 255, .84);
   padding: 0;
-  border-bottom: 2px solid transparent;
-  transition: color .18s, border-color .18s;
+  transition: color .18s;
 }
 .nav a:hover { color: #fff; text-decoration: none; }
-.nav a.is-active { color: #fff; border-bottom-color: rgba(255, 255, 255, .75); }
+.nav a.is-active { color: #fff; }
+/* 当前页：贴着文字下缘画一条 2px 线，而不是压在顶栏底边上 */
+.nav a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+  height: 2px;
+  background: rgba(255, 255, 255, .85);
+}
 
 .lang { display: flex; align-items: center; align-self: center; gap: 5px; margin-left: 6px; font-size: 12.5px; }
 .lang button {
@@ -566,6 +580,7 @@ a.pill:hover { color: var(--primary); border-color: var(--primary); text-decorat
     font-size: 14.5px;
   }
   .nav a.is-active { border-bottom-color: rgba(255, 255, 255, .12); color: #fff; }
+  .nav a.is-active::after { display: none; }
   .lang { margin: 10px 0 2px; }
 
   .container { padding: 0 20px; }
