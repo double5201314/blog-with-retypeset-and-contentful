@@ -372,6 +372,40 @@ main { display: block; padding-bottom: 96px; }
   margin-top: 4px;
   line-height: 1.6;
 }
+.person__bio {
+  font-size: 13.5px;
+  color: #9aa1b0;
+  margin-top: 8px;
+  line-height: 1.7;
+  text-align: center;
+}
+.person__link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.person__link:hover .person__avatar { box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.25); }
+.person__link:hover .person__name { color: var(--primary); }
+
+/* ---------- 首页研究方向总览图 ---------- */
+.areas-figure {
+  margin: 34px 0 0;
+}
+.areas-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #e3e6ef;
+  border-radius: 10px;
+  background: #fff;
+}
+.areas-figure figcaption {
+  margin-top: 10px;
+  font-size: 13.5px;
+  color: var(--muted);
+  text-align: right;
+  line-height: 1.6;
+}
 .person__links {
   display: flex;
   justify-content: center;
@@ -611,6 +645,61 @@ a.pill:hover { color: var(--primary); border-color: var(--primary); text-decorat
   .people-grid,
   .people-grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 12px; }
   .person__avatar { width: 104px; height: 104px; font-size: 34px; }
+}
+
+/* ---------- 研究生个人主页 ---------- */
+.profile {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 64px;
+  margin-top: 40px;
+  align-items: start;
+}
+.profile__side { text-align: center; }
+.profile__avatar {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 22px;
+  background: #eef0f6;
+}
+.profile__avatar img { width: 100%; height: 100%; object-fit: cover; }
+.profile__name {
+  font-family: var(--font-display);
+  font-size: 27px;
+  color: var(--heading);
+  line-height: 1.35;
+}
+.profile__cn { font-size: 15px; color: var(--muted); margin-top: 3px; }
+.profile__uni {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 15px;
+  color: var(--primary);
+  text-decoration: none;
+  line-height: 1.55;
+}
+.profile__uni:hover { text-decoration: underline; }
+.profile__body h2 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--heading);
+  margin: 34px 0 12px;
+}
+.profile__body > p { margin: 0; }
+.profile__interests { margin: 0; padding-left: 22px; }
+.profile__interests li { margin: 5px 0; }
+.profile__edu { list-style: none; margin: 0; padding: 0; }
+.profile__edu li { display: flex; gap: 12px; margin: 16px 0; align-items: flex-start; }
+.profile__edu .edu-icon { font-size: 20px; line-height: 1.35; }
+.profile__edu b { font-weight: 600; color: var(--heading); }
+.profile__edu .edu-school { font-size: 14.5px; color: var(--muted); margin-top: 3px; }
+.profile__edu a { color: inherit; text-decoration: none; }
+.profile__edu a:hover { text-decoration: underline; }
+@media (max-width: 760px) {
+  .profile { grid-template-columns: 1fr; gap: 34px; }
+  .profile__avatar { width: 170px; height: 170px; }
 }
 
 /* ---------- 打印 ---------- */
